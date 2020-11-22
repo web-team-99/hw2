@@ -90,6 +90,7 @@ body {
     position: fixed;
     z-index: 99;
     box-shadow: 0px 0 8px rgba(0, 0, 0, 0.671);
+
 }
 
 #sidebar .sidebar-headers {
@@ -138,24 +139,13 @@ body {
     /* padding-left: 20px; */
 }
 
-/* Container */
-/* .container {
-    padding-top: 55px;
-    /* display: flex; */
-    /* background-color: darkmagenta;
-    min-width: 100vh; */
-    /* min-height:100vh; */
-    /* align-items: stretch; */
-/* } */ 
-
-
 #page-contents {
     background-color: rgba(38, 156, 253, 0.658);
-    margin-left: 0px;
     margin-right: 300px;
     width: 100%;
-    min-height: 100%;
-    padding-top: 20px;
+    height: 100%;
+    /* padding-top: 20px; */
+    padding: 20px ;
     position: fixed;
     overflow-y: auto;
 }
@@ -219,10 +209,12 @@ body {
 @media (max-width: 375px){
     #logo {
         width: 100%;
-        min-width: fit-content;
+        /* min-width: fit-content; */
     }
 }
 
+
+/* Animations */
 .swipeAnimation{
     animation: swipeFromRight .4s ease-in-out;
     animation-iteration-count: 1;
@@ -237,8 +229,3 @@ body {
     0% {margin-left: -300px;}
     100% {margin-left: 0px;}
 }
-
-/* @keyframes swipeReversed{
-    0% {margin-right: 0px;}
-    100% {margin-right: -300px;}
-} */
