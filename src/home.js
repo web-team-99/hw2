@@ -1,14 +1,17 @@
 function onSidebarCollapseClicked(){
     console.log("sidebar-collapse clicked !!!"); 
     var classlist = document.getElementById("sidebar").classList;
+    var collapseBtnClasslist = document.getElementById("sidebarCollapse").classList;
     if (classlist.contains("active")){
         swipeFromRight(classlist, true);
         classlist.remove("active");
+        collapseBtnClasslist.add("active");
         console.log('class removed...');
         return;
     }
     swipeFromRight(classlist, false);
     classlist.add("active");
+    collapseBtnClasslist.remove("active");
     console.log("class added...");
 }
 
