@@ -1,0 +1,225 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
+
+
+
+body {
+    background-color: #fafafa;
+    padding-top: 50px;
+    text-align: right;
+    font-family: 'sahel', 'shabnam', sans-serif;
+}
+
+
+/* Navigation bar */
+#logo {
+    max-width: 284px;
+    min-width: 284px;
+    margin-inline-start: 0%;
+    padding-bottom: 10px;
+}
+
+#nav-tab {
+    padding-right: 0px;
+    /* min-width: 200px; */
+    /* max-width: 250px; */
+    /* border-bottom: unset; */
+    /* align-items: stretch;     */
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+}
+
+
+/* #nav-tab a {
+    padding: 6px;
+} */
+
+#nav-tab li {
+    width: 50%;
+}
+
+#login-btns {
+    padding-right: 0px;
+}
+
+.navbar {
+    min-height: 70px;
+    max-height: 70px;
+    padding-bottom: 0;
+}
+
+/* .btn-secondary {
+    background-color: lawngreen;
+    
+} */
+
+
+/* Sidebar */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    
+}
+
+#sidebar {
+    padding-top: 55px;
+    background-color: #9ba1b9;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 100vh;
+    border: darkgray solid 1px;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0px 0 8px rgba(0, 0, 0, 0.671);
+}
+
+#sidebar .sidebar-headers {
+    background-color: #d6d9e6;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    border: darkgrey solid 1px;
+    box-shadow: 1px 3px rgb(102, 82, 121);
+}
+
+/* #sidebar.active {
+    margin-right: -300px;
+} */
+
+#sidebar ul.components{
+    /* background-color: blanchedalmond; */
+    padding-inline-start: 0px;
+}
+
+/* #sidebar #team{
+    background-color: brown;
+} */
+
+#setting p{
+    /* background-color: chartreuse; */
+    margin-bottom: 0px;
+}
+
+.toggle.ios {
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 60px;
+}
+
+#sidebar li {
+    margin-bottom: 12px;
+    font-size: 1em;
+    font-family: 'sahel', 'shabnam', sans-serif;
+}
+
+#sidebar ul li {
+    width: 100%;
+    box-sizing: unset;
+    /* text-align: right; */
+    /* padding-left: 20px; */
+}
+
+/* Container */
+/* .container {
+    padding-top: 55px;
+    /* display: flex; */
+    /* background-color: darkmagenta;
+    min-width: 100vh; */
+    /* min-height:100vh; */
+    /* align-items: stretch; */
+/* } */ 
+
+
+#page-contents {
+    background-color: rgba(38, 156, 253, 0.658);
+    margin-left: 0px;
+    margin-right: 300px;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 20px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+#sidebarCollapse {
+    display: none;
+}
+
+#pageFooter{
+    min-width: 100%;
+    min-height: 50px;
+    background-color: whitesmoke;
+    z-index: 90;
+    /* position: fixed; */
+    /* bottom: 0; */
+    box-shadow: 0px 0 18px 2px rgba(83, 80, 80, 0.6);
+    visibility: hidden;
+}
+
+#pageFooter button{
+    min-width: 25%;
+    
+}
+
+
+/* Media Queries */
+@media (max-width: 599px){
+    #sidebar{
+        margin-right: -300px
+    }
+    #sidebar.active{
+        margin-right: 0;
+    }
+
+    #sidebarCollapse {
+        display: block;
+    }
+    /* #navbar-items { */
+        /* visibility: hidden; */
+        /* display: none; */
+    /* } */
+
+    #nav-tab li {
+        display: none;
+    }
+     
+    #login-btns{
+        display: none;
+    }
+
+    #page-contents{
+        margin-right: 0px;
+    }
+
+    #pageFooter{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 375px){
+    #logo {
+        min-width: auto;
+    }
+}
+
+.swipeAnimation{
+    animation: swipeFromRight .4s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.swipeAnimationReversed{
+    animation: swipeFromRight .4s reverse ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes swipeFromRight {
+    0% {margin-right: -300px;}
+    100% {margin-right: 0px;}
+}
+
+/* @keyframes swipeReversed{
+    0% {margin-right: 0px;}
+    100% {margin-right: -300px;}
+} */
