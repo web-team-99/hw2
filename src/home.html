@@ -17,29 +17,27 @@
 
     <!-- Top Navigation bar -->
     <nav class="navbar fixed-top bg-light navbar-light shadow">
-        <div class="container-fluid">
+        <div class="d-flex" id="navContainer">
             <a class="navbar-brand " id="logo">WebDev</a>
 
             <button class="btn btn-info" id="sidebarCollapse" type="button" onclick="onSidebarCollapseClicked()">
-                <!-- <i class="fas fa-align-left"></i> -->
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
-            <div class="d-inline-flex" id="nav-items">
-                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <li class="navbar-item">
+            <div class="d-flex justify-content-between" id="nav-items">
+                <ul class="nav nav-tabs" id="nav-tabs" role="tablist">
+                    <li class="nav-item">
                         <a class="nav-link active" href="#home" id="home-tab" data-toggle="tab" role="tab"
                             aria-controls="home" aria-selected="true">خانه</a>
                     </li>
-                    <li class="navbar-item">
+                    <li class="nav-item">
                         <a class="nav-link " href="#data" id="data-tab" data-toggle="tab" role="tab"
                             aria-controls="data" aria-selected="false">داده ها</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav " id="login-btns">
-                    <button class="btn btn-secondary navbar-item mx-1">ورود</button>
-                    <button class="btn btn-outline-primary navbar-item mx-1">ثبت نام</button>
+                <ul class="nav " id="login-btns">
+                    <button class="btn btn-secondary mx-1">ورود</button>
+                    <button class="btn btn-outline-primary  mx-1">ثبت نام</button>
                 </ul>
             </div>
         </div>
