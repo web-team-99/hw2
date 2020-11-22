@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="sign_in_up.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body dir="rtl">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <div>
+            <picture>
+              <!-- <img class="img" alt="Cinque Terre" width="200" height="200" /> -->
+              <img class="img-fluid" alt="Responsive image" width="200" />
+            </picture>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="container-fluid" style="width: 100%">
+            <ul class="nav nav-tabs nav-justified" style="width: 100%">
+              <li class="tab active" style="width: 100%">
+                <a data-toggle="tab" href="#signup">ثبت‌نام</a>
+              </li>
+              <li class="tab" style="width: 100%">
+                <a data-toggle="tab" href="#signin">ورود</a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="signup" class="tab-pane fade in active field">
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="ایمیل"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="رمز عبور"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="تکرار رمز عبور"
+                    />
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >قوانین و مقررات را می‌پذیرم.</label
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width: 100%"
+                  >
+                    ثبت‌نام
+                  </button>
+                </form>
+              </div>
+              <div id="signin" class="tab-pane fade field">
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="ایمیل"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="رمز عبور"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width: 100%"
+                  >
+                    ورود
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
