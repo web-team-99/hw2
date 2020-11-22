@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="home.js"></script>
+    <title>Document</title>
+</head>
+
+<body dir="rtl">
+
+    <!-- Top Navigation bar -->
+    <nav class="navbar fixed-top bg-light navbar-light shadow">
+        <div class="d-flex" id="navContainer">
+            <a class="navbar-brand " id="logo">WebDev</a>
+
+            <button class="btn btn-info" id="sidebarCollapse" type="button" onclick="onSidebarCollapseClicked()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
+
+            <div class="d-flex justify-content-between" id="nav-items">
+                <ul class="nav nav-tabs" id="nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" id="home-tab" data-toggle="tab" role="tab"
+                            aria-controls="home" aria-selected="true">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#data" id="data-tab" data-toggle="tab" role="tab"
+                            aria-controls="data" aria-selected="false">داده ها</a>
+                    </li>
+                </ul>
+                <ul class="nav " id="login-btns">
+                    <button class="btn btn-secondary mx-1">ورود</button>
+                    <button class="btn btn-outline-primary  mx-1">ثبت نام</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Tab contents -->
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+        <div class="tab-pane fade " id="data" role="tabpanel" aria-labelledby="data-tab"></div>
+    </div>
+
+
+    <!-- Sidebar and Content -->
+    <div class="wrapper">
+
+        <!-- Side Navigation bar-->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <li>
+                    <p class="sidebar-headers">اعضای تیم</p>
+                    <ul id="team">
+                        <li>محسن کثیری</li>
+                        <li>مهدی فرزادی </li>
+                        <li>محمدجواد میرتیموری</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="sidebar-headers">تنظیمات</p>
+                    <ul id="setting">
+                        <li class="d-flex justify-content-between align-items-center">
+                            <p id="nightMode-text ">حالت شب</p>
+                            <input class="" type="checkbox" data-toggle="toggle" data-on="فعال" data-off="غیرفعال"
+                                data-width="75px" data-style="ios">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+
+        <!-- Contents (Should be replaced with Tab contents) -->
+        <div class="" id="page-contents">
+            <div class="row">
+                <div class="col">
+                    row 1 col 1
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    row 2 col 1
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    row 3 col 1
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (for small screen sizes) -->
+    <footer class="dk-footer fixed-bottom d-flex align-items-stretch" id="pageFooter">
+        <button class="btn ">خانه</button>
+
+        <button class="btn">داده ها</button>
+
+        <button class="btn">ورود</button>
+
+        <button class="btn">ثبت نام</button>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</body>
+
+</html>
