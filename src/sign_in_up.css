@@ -48,6 +48,14 @@ body {
   padding: 1em;
 } */
 
+.back-button:hover {
+  text-decoration: none;
+}
+
+.back-button:active {
+  text-decoration: none;
+}
+
 .form {
   padding: 2em;
   display: none;
