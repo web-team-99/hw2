@@ -2,13 +2,17 @@
 @import url("https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css");
 
 :root {
-  --dark-color: rgba(8, 79, 129, 0.658);
-  --medium-color: rgba(75, 119, 151, 0.658);
-  --light-color: rgba(193, 212, 236, 0.658);
+  --white-smoke: whitesmoke;
+
+  --dark-color: rgb(8, 79, 129);
+  --medium-color: rgb(113, 152, 180);
+  --light-color: rgb(193, 212, 236);
+
+  --dark-theme-color: rgba(19, 19, 19);
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--white-smoke);
   padding-top: 50px;
   text-align: right;
   font-family: "sahel", "shabnam", sans-serif;
@@ -83,7 +87,7 @@ body {
 
 .table-striped > tbody > tr:nth-child(2n + 1) > td,
 .table-striped > tbody > tr:nth-child(2n + 1) > th {
-  background-color: whitesmoke;
+  background-color: var(--white-smoke);
 }
 
 .table-striped > tbody > tr:nth-child(2n) > td,
@@ -99,7 +103,7 @@ body {
 .table-striped > thead > tr > th {
   background-color: var(--dark-color);
   text-align: center;
-  color: whitesmoke;
+  color: var(--white-smoke);
 }
 
 .table-button {
@@ -127,7 +131,7 @@ body {
 
 #sidebar {
   padding-top: 55px;
-  background-color: #9ba1b9;
+  background-color: var(--light-color);
   max-width: 300px;
   min-width: 300px;
   min-height: 100vh;
@@ -138,7 +142,7 @@ body {
 }
 
 #sidebar .sidebar-headers {
-  background-color: #d6d9e6;
+  background-color: var(--medium-color);
   padding: 10px;
   font-weight: bolder;
   font-size: 1.2em;
@@ -219,7 +223,7 @@ body {
 
 /* Page Content Container */
 #page-contents {
-  background-color: whitesmoke;
+  background-color: var(--white-smoke);
   margin-right: 300px;
   width: 100%;
   height: 100%;
@@ -233,7 +237,7 @@ body {
 #pageFooter {
   min-width: 100%;
   min-height: 50px;
-  background-color: whitesmoke;
+  background-color: var(--white-smoke);
   z-index: 90;
   /* position: fixed; */
   /* bottom: 0; */
