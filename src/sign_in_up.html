@@ -29,8 +29,6 @@
     ></script>
   </head>
   <body style="height: 100vh" dir="rtl">
-    <!-- main content -->
-
     <div
       class="d-flex flex-column justify-content-center align-items-center h-100"
     >
@@ -49,11 +47,27 @@
           </div>
         </div>
       </nav>
-      <div class="container h-75 bg-light">
+
+      <!-- main content -->
+      <div class="container h-75 mt-5">
         <div class="row h-100">
-          <div class="col-4 p-0 h-100">
+          <div class="col-4 p-0 h-100 forms-container bg-light">
             <div class="d-flex flex-column  h-100 p-0">
               <div id="tabs" class="d-flex justify-content-center">
+                <a id="signup" class="col-6 text-center tab active bg-light"
+                  >ثبت‌نام</a
+                >
+                <a id="signin" class="col-6 text-center tab">ورود</a>
+                <!-- <input
+                  type="button"
+                  class="col-6 text-center tab active bg-light border-0"
+                  value="Input Button"
+                />
+                <input
+                  type="button"
+                  class="col-6 text-center tab border-0"
+                  value="Input Button"
+                /> -->
                 <!-- <button
                   id="signup"
                   class="col-6 text-center tab active bg-light border-0"
@@ -63,12 +77,12 @@
                 <button id="signin" class="col-6 text-center tab border-0">
                   <strong>ورود</strong>
                 </button> -->
-                <div id="signup" class="col-6 text-center tab active bg-light">
+                <!-- <div id="signup" class="col-6 text-center tab active bg-light">
                   <strong>ثبت‌نام</strong>
                 </div>
                 <div id="signin" class="col-6 text-center tab">
                   <strong>ورود</strong>
-                </div>
+                </div> -->
               </div>
               <div class="d-flex flex-column justify-content-center h-100">
                 <div id="signup-form" class="form show">
@@ -129,10 +143,16 @@
               </div>
             </div>
           </div>
-          <div class="col-8 bg-primary p-0">
-            <div class="image-holder">
+          <div class="col-8 bg-primary p-0 image-holder">
+            <div>
               <picture class="image">
-                <img class="img-fluid" alt="Responsive image" width="200" />
+                <source
+                  srcset="files/signup-lowQ-light.jpg"
+                  media="(max-width: 1000px)"
+                />
+                <source srcset="files/signup-highQ-light.jpg" />
+
+                <img class="img-fluid mw-100" alt="Responsive image" />
               </picture>
             </div>
           </div>
