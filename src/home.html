@@ -1,123 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+      rel="stylesheet"
+    />
     <script src="home.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body dir="rtl">
-
+  <body dir="rtl">
     <!-- Top Navigation bar -->
     <nav class="navbar fixed-top bg-light navbar-light shadow">
-        <div class="d-flex" id="navContainer">
-            <a class="navbar-brand " id="logo">WebDev</a>
+      <div class="d-flex" id="navContainer">
+        <a class="navbar-brand" id="logo">WebDev</a>
 
-            <button class="btn btn-info" id="sidebarCollapse" type="button" onclick="onSidebarCollapseClicked()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-            </button>
+        <button
+          class="btn btn-info"
+          id="sidebarCollapse"
+          type="button"
+          onclick="onSidebarCollapseClicked()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-            <div class="d-flex justify-content-between" id="nav-items">
-                <ul class="nav nav-tabs" id="nav-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home" id="home-tab" data-toggle="tab" role="tab"
-                            aria-controls="home" aria-selected="true">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#data" id="data-tab" data-toggle="tab" role="tab"
-                            aria-controls="data" aria-selected="false">داده ها</a>
-                    </li>
-                </ul>
-                <ul class="nav " id="login-btns">
-                    <button class="btn btn-secondary mx-1">ورود</button>
-                    <button class="btn btn-outline-primary  mx-1">ثبت نام</button>
-                </ul>
-            </div>
+        <div class="d-flex justify-content-between" id="nav-items">
+          <ul class="nav nav-tabs" id="nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#home"
+                id="home-tab"
+                data-toggle="tab"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >خانه</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#data"
+                id="data-tab"
+                data-toggle="tab"
+                role="tab"
+                aria-controls="data"
+                aria-selected="false"
+                >داده ها</a
+              >
+            </li>
+          </ul>
+          <ul class="nav" id="login-btns">
+            <button class="btn btn-secondary mx-1">ورود</button>
+            <button class="btn btn-outline-primary mx-1">ثبت نام</button>
+          </ul>
         </div>
+      </div>
     </nav>
-
 
     <!-- Tab contents -->
     <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
-        <div class="tab-pane fade " id="data" role="tabpanel" aria-labelledby="data-tab"></div>
+      <div
+        class="tab-pane fade active show"
+        id="home"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="data"
+        role="tabpanel"
+        aria-labelledby="data-tab"
+      ></div>
     </div>
-
 
     <!-- Sidebar and Content -->
     <div class="wrapper">
-
-        <!-- Side Navigation bar-->
-        <nav id="sidebar">
-            <ul class="list-unstyled components">
-                <li>
-                    <p class="sidebar-headers">اعضای تیم</p>
-                    <ul id="team">
-                        <li>محسن کثیری</li>
-                        <li>مهدی فرزادی </li>
-                        <li>محمدجواد میرتیموری</li>
-                    </ul>
-                </li>
-                <li>
-                    <p class="sidebar-headers">تنظیمات</p>
-                    <ul id="setting">
-                        <li class="d-flex justify-content-between align-items-center">
-                            <p id="nightMode-text ">حالت شب</p>
-                            <input class="" type="checkbox" data-toggle="toggle" data-on="فعال" data-off="غیرفعال"
-                                data-width="75px" data-style="ios">
-                        </li>
-                    </ul>
-                </li>
+      <!-- Side Navigation bar-->
+      <nav id="sidebar">
+        <ul class="list-unstyled components">
+          <li>
+            <p class="sidebar-headers">اعضای تیم</p>
+            <ul id="team">
+              <li>محسن کثیری</li>
+              <li>مهدی فرزادی</li>
+              <li>محمدجواد میرتیموری</li>
             </ul>
-        </nav>
+          </li>
+          <li>
+            <p class="sidebar-headers">تنظیمات</p>
+            <ul id="setting">
+              <li class="d-flex justify-content-between align-items-center">
+                <p id="nightMode-text ">حالت شب</p>
+                <input
+                  class=""
+                  type="checkbox"
+                  data-toggle="toggle"
+                  data-on="فعال"
+                  data-off="غیرفعال"
+                  data-width="75px"
+                  data-style="ios"
+                />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
+      <!-- Contents (Should be replaced with Tab contents) -->
+      <div class="" id="page-contents">
+        <table class="table table-striped table-bordered" id="content-table">
+          <thead>
+            <tr>
+              <th scope="col">رتبه</th>
+              <th scope="col">نام تیم</th>
+              <th scope="col">نام دانشگاه و کشور</th>
+              <th scope="col">امتیاز</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">۱</th>
+              <td>روشنز</td>
+              <td>صنعتی شریف / ایران</td>
+              <td>۱۲۰۰</td>
+            </tr>
+            <tr>
+              <th scope="row">۲</th>
+              <td>خاموشز</td>
+              <td>سنتی کثیف / شیران</td>
+              <td>۵۰۰</td>
+            </tr>
+            <tr>
+              <th scope="row">۳</th>
+              <td>کم نورز</td>
+              <td>صنعتی ردیف / دلیران</td>
+              <td>۳۵۰</td>
+            </tr>
+            <tr>
+              <th scope="row">۴</th>
+              <td>سوخته‌ز</td>
+              <td>سنتی خفیف / کبیران</td>
+              <td>۹۰</td>
+            </tr>
+            <tr>
+              <th scope="row">۵</th>
+              <td>کم سوز</td>
+              <td>صنعتی حنیف / پیران</td>
+              <td>۴٫۵</td>
+            </tr>
+          </tbody>
+        </table>
 
-
-        <!-- Contents (Should be replaced with Tab contents) -->
-        <div class="" id="page-contents">
-            <div class="row">
-                <div class="col">
-                    row 1 col 1
-                </div>
+        <div class="small-view-data">
+          <div class="small-view-data-content">
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رتبه</h5>
+              <h5 class="small-view-data-element-explain">۱</h5>
             </div>
-            <div class="row">
-                <div class="col">
-                    row 2 col 1
-                </div>
-
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">نام تیم</h5>
+              <h5 class="small-view-data-element-explain">روشنز</h5>
             </div>
-            <div class="row">
-                <div class="col">
-                    row 3 col 1
-                </div>
-
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
+              <h5 class="small-view-data-element-explain">صنعتی شریف/ایران</h5>
             </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">امتیاز</h5>
+              <h5 class="small-view-data-element-explain">۱۲۰۰</h5>
+            </div>
+          </div>
+
+          <div class="small-view-data-content">
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رتبه</h5>
+              <h5 class="small-view-data-element-explain">۲</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">نام تیم</h5>
+              <h5 class="small-view-data-element-explain">خاموشز</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
+              <h5 class="small-view-data-element-explain">سنتی کثیف/شیران</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">امتیاز</h5>
+              <h5 class="small-view-data-element-explain">۵۰۰</h5>
+            </div>
+          </div>
+
+          <div class="small-view-data-content">
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رتبه</h5>
+              <h5 class="small-view-data-element-explain">۳</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">نام تیم</h5>
+              <h5 class="small-view-data-element-explain">کم نورز</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
+              <h5 class="small-view-data-element-explain">صنعتی ردیف/دلیران</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">امتیاز</h5>
+              <h5 class="small-view-data-element-explain">۳۵۰</h5>
+            </div>
+          </div>
+
+          <div class="small-view-data-content">
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رتبه</h5>
+              <h5 class="small-view-data-element-explain">۴</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">نام تیم</h5>
+              <h5 class="small-view-data-element-explain">سوخته‌ز</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
+              <h5 class="small-view-data-element-explain">سنتی خفیف/کبیران</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">امتیاز</h5>
+              <h5 class="small-view-data-element-explain">۹۰</h5>
+            </div>
+          </div>
+
+          <div class="small-view-data-content">
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رتبه</h5>
+              <h5 class="small-view-data-element-explain">۵</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">نام تیم</h5>
+              <h5 class="small-view-data-element-explain">کم سوز</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
+              <h5 class="small-view-data-element-explain">صنعتی حنیف/پیران</h5>
+            </div>
+            <div class="small-view-data-element">
+              <h5 class="small-view-data-element-subject">امتیاز</h5>
+              <h5 class="small-view-data-element-explain">۴٫۵</h5>
+            </div>
+          </div>
         </div>
+
+        <div
+          style="display: flex; justify-content: space-between; margin: 20px"
+        >
+          <button class="btn btn-outline-primary mx-1 table-button">
+            قبلی
+          </button>
+          <button class="btn btn-outline-primary mx-1 table-button">
+            بعدی
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Footer (for small screen sizes) -->
-    <footer class="dk-footer fixed-bottom d-flex align-items-stretch" id="pageFooter">
-        <button class="btn ">خانه</button>
+    <footer
+      class="dk-footer fixed-bottom d-flex align-items-stretch"
+      id="pageFooter"
+    >
+      <button class="btn">خانه</button>
 
-        <button class="btn">داده ها</button>
+      <button class="btn">داده ها</button>
 
-        <button class="btn">ورود</button>
+      <button class="btn">ورود</button>
 
-        <button class="btn">ثبت نام</button>
+      <button class="btn">ثبت نام</button>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-</body>
-
+  </body>
 </html>
