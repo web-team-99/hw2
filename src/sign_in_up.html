@@ -7,86 +7,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="sign_in_up.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body dir="rtl">
+  <body style="height: 100vh" dir="rtl">
+    <!-- main content -->
+
     <div
-      class="d-flex flex-column justify-content-center align-items-center"
-      style="height: 100vh"
+      class="d-flex flex-column justify-content-center align-items-center h-100"
     >
-      <div class="container mc">
-        <div class="row">
-          <div class="col-sm-8" style="padding: 0%">
+      <!-- Top Navigation bar -->
+      <nav class="navbar fixed-top shadow w-100">
+        <div class="d-flex justify-content-between w-100" id="navContainer">
+          <div>
+            <a class="navbar-brand " id="logo">WebDev</a>
+          </div>
+          <div id="nav-items">
+            <ul class="nav " id="login-btns">
+              <button class="btn btn-outline-primary  mx-1">
+                بازگشت به خانه
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container h-75 bg-light">
+        <div class="row h-100">
+          <div class="col-4 p-0 h-100">
+            <div class="d-flex flex-column  h-100 p-0">
+              <div id="tabs" class="d-flex justify-content-center">
+                <!-- <button
+                  id="signup"
+                  class="col-6 text-center tab active bg-light border-0"
+                >
+                  <strong>ثبت‌نام</strong>
+                </button>
+                <button id="signin" class="col-6 text-center tab border-0">
+                  <strong>ورود</strong>
+                </button> -->
+                <div id="signup" class="col-6 text-center tab active bg-light">
+                  <strong>ثبت‌نام</strong>
+                </div>
+                <div id="signin" class="col-6 text-center tab">
+                  <strong>ورود</strong>
+                </div>
+              </div>
+              <div class="d-flex flex-column justify-content-center h-100">
+                <div id="signup-form" class="form show">
+                  <input
+                    type="email"
+                    class="form-control field p-2"
+                    id="email"
+                    placeholder="ایمیل"
+                  />
+                  <input
+                    type="password"
+                    class="form-control field p-2 mt-2"
+                    id="password"
+                    placeholder="رمز عبور"
+                  />
+                  <input
+                    type="password"
+                    class="form-control field p-2 mt-2"
+                    id="confirm"
+                    placeholder="تکرار رمز عبور"
+                  />
+                  <div class="form-group form-check d-flex flex-row py-2 my-3">
+                    <label class="form-check-label d-flex flex-row">
+                      <a class="col mr-2 "
+                        ><small>قوانین و شرایط را می‌پذیرم.</small></a
+                      >
+                      <input class="col-1 form-check-input" type="checkbox" />
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary button w-100 mt-4"
+                  >
+                    <strong>ثبت‌نام</strong>
+                  </button>
+                </div>
+
+                <div id="signin-form" class="form">
+                  <input
+                    type="email"
+                    class="form-control field p-2"
+                    id="email"
+                    placeholder="ایمیل"
+                  />
+                  <input
+                    type="password"
+                    class="form-control field p-2 mt-2"
+                    id="password"
+                    placeholder="رمز عبور"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-primary button  w-100 mt-5"
+                  >
+                    <strong>ورود</strong>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 bg-primary p-0">
             <div class="image-holder">
               <picture class="image">
                 <img class="img-fluid" alt="Responsive image" width="200" />
               </picture>
-            </div>
-          </div>
-          <div class="col-sm-4" style="padding: 0%">
-            <div class="container-fluid">
-              <div id="tabs" class="row">
-                <div id="signin" class="col-sm-6 text-center tab">
-                  ورود
-                </div>
-                <div id="signup" class="col-sm-6 text-center tab active">
-                  ثبت‌نام
-                </div>
-              </div>
-              <div id="signup-form" class="row form show">
-                <input
-                  type="email"
-                  class="form-control field"
-                  id="email"
-                  placeholder="ایمیل"
-                />
-                <input
-                  type="password"
-                  class="form-control field"
-                  id="password"
-                  placeholder="رمز عبور"
-                />
-                <input
-                  type="password"
-                  class="form-control field"
-                  id="confirm"
-                  placeholder="تکرار رمز عبور"
-                />
-                <div class="form-group form-check field">
-                  <input type="checkbox" class="form-check-input" id="policy" />
-                  <label
-                    class="form-check-label"
-                    style="font-size: 2ex"
-                    for="policy"
-                    >قوانین و شرایط را می‌پذیرم.</label
-                  >
-                </div>
-                <button type="submit" class="btn btn-primary button">
-                  ثبت‌نام
-                </button>
-              </div>
-
-              <div id="signin-form" class="row form">
-                <input
-                  type="email"
-                  class="form-control field"
-                  id="email"
-                  placeholder="ایمیل"
-                />
-                <input
-                  type="password"
-                  class="form-control field"
-                  id="password"
-                  placeholder="رمز عبور"
-                />
-                <button type="submit" class="btn btn-primary button">
-                  ورود
-                </button>
-              </div>
             </div>
           </div>
         </div>

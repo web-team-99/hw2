@@ -12,9 +12,11 @@ function onTabsClicked(event) {
   tabs = document.getElementsByClassName("tab");
   for (i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove("active");
+    tabs[i].classList.remove("bg-light");
   }
 
   let formID = event.target.id + "-form";
   document.getElementById(formID).classList.add("show");
   event.target.classList.add("active");
+  event.target.classList.add("bg-light");
 }
