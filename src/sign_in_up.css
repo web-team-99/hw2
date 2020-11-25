@@ -12,8 +12,12 @@ body {
 
 .image-text {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  right: 5%;
+  bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 30%;
+  text-align: right;
 }
 .image-holder {
   position: relative;

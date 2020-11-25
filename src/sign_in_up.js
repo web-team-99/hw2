@@ -73,7 +73,6 @@ function signupValidate() {
   let messageP = document.getElementById("signup_message");
   messageP.innerText = message;
   alert.classList.add("show-alert");
-  return false;
 }
 
 function signinValidate() {
