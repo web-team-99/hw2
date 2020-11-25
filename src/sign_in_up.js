@@ -21,6 +21,13 @@ function onTabsClicked(event) {
   event.target.classList.add("bg-light");
 }
 
+function onLoad() {
+  let urlString = window.location.href;
+  let url = new URL(urlString);
+  let tabName = url.searchParams.get("tab");
+  if (tabName === "signin") document.getElementById("signin").click();
+}
+
 function onBack() {
   location.replace("./home.html");
 }
