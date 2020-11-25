@@ -275,7 +275,7 @@ body {
   /* padding-top: 20px; */
   padding: 30px;
   position: fixed;
-  /* overflow-y: auto; */
+  overflow-y: auto;
 }
 
 #containerInner {
