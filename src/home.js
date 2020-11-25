@@ -64,3 +64,26 @@ function toggleNightMode(checkbox) {
     docElementStyle.setProperty(text_high, "var(--light-text-high)");
 }
 
+let tabs = document.getElementById("nav-tabs");
+tabs.addEventListener("click", onTabClicked);
+
+function onTabClicked(event){
+    let tabs = document.getElementsByClassName("tab");
+    for(let i = 0; i < tabs.length; i++){
+        tabs[i].classList.remove("active");
+        console.log("removing active tab");
+    }
+
+    let tabContent = document.getElementsByClassName("tabContent");
+    for(let i = 0; i < tabContent.length; i++){
+        tabContent[i].classList.remove("show");
+        console.log("removing show content");
+    }
+
+    let contentID = event.target.id + "-content";
+    console.log(contentID);
+    document.getElementById(contentID).classList.add("show");
+    document.getElementById(contentID).classList.add("in");
+    document.getElementById(event.target.id).classList.add("active");
+    console.log(document.getElementById(event.target.id).classList.contains("active"));
+}
