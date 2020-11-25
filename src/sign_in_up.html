@@ -39,6 +39,7 @@
           <div id="nav-items">
             <ul class="nav " id="login-btns">
               <button
+                onclick="onBack()"
                 class="btn btn-link d-flex justify-content-center mx-1 back-button p-0"
               >
                 <p class="m-0"><small>بازگشت به خانه</small></p>
@@ -64,8 +65,7 @@
                 <form
                   id="signup-form"
                   class="form show"
-                  action="#"
-                  onsubmit="signupValidate(this)"
+                  action="javascript:signupValidate(this);"
                   novalidate
                 >
                   <input
@@ -88,9 +88,12 @@
                   />
                   <div class="form-group form-check d-flex flex-row py-2 my-3">
                     <label class="form-check-label d-flex flex-row">
-                      <a class="col mr-2 "
-                        ><small>قوانین و شرایط را می‌پذیرم.</small></a
-                      >
+                      <p class="col mr-2">
+                        <small
+                          ><a href="./home.html">قوانین و شرایط</a> را
+                          میپذیرم.</small
+                        >
+                      </p>
                       <input
                         id="policy"
                         class="col-1 form-check-input"
@@ -133,7 +136,7 @@
                 <form
                   id="signin-form"
                   class="form"
-                  onsubmit="signinValidate(this)"
+                  action="javascript:signinValidate();"
                   novalidate
                 >
                   <input
@@ -163,7 +166,7 @@
                   >
                     <div
                       id="alert_body"
-                      class="d-flex flex-row justify-content-between alert-body"
+                      class="d-flex flex-row justify-content-between alert-body text-sm-right"
                     >
                       <p id="signin_message" class="m-0">
                         This alert box could indicate a warning that might need

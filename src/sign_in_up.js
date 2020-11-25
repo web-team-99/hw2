@@ -21,7 +21,20 @@ function onTabsClicked(event) {
   event.target.classList.add("bg-light");
 }
 
-function signupValidate(form) {
+function onBack() {
+  location.replace("./home.html");
+}
+
+function signup(email, pass) {
+  location.replace("./home.html");
+}
+
+function signin(email, pass) {
+  location.replace("./home.html");
+}
+
+function signupValidate() {
+  let form = document.getElementById("signup-form");
   let email = form.email.value;
   let pass = form.password.value;
   let pass2 = form.confirm.value;
@@ -33,6 +46,7 @@ function signupValidate(form) {
       if (pass.trim() != "") {
         if (pass == pass2) {
           console.log("ok");
+          signup(email, pass);
           return;
         } else {
           message = "رمز عبور و تکرار آن باید مطابق هم باشند";
@@ -59,9 +73,11 @@ function signupValidate(form) {
   let messageP = document.getElementById("signup_message");
   messageP.innerText = message;
   alert.classList.add("show-alert");
+  return false;
 }
 
-function signinValidate(form) {
+function signinValidate() {
+  let form = document.getElementById("signin-form");
   let email = form.email.value;
   let pass = form.password.value;
   let message;
@@ -69,6 +85,7 @@ function signinValidate(form) {
   if (ValidateEmail(email)) {
     if (pass.trim() != "") {
       console.log("ok");
+      signin(email, pass);
       return;
     } else {
       message = "لطفا رمز عبور را وارد کنید";
@@ -85,7 +102,6 @@ function signinValidate(form) {
   }, 500);
   let alert = document.getElementById("signin_alert");
   let messageP = document.getElementById("signin_message");
-  console.log(alert.classList.remove("show-alert"));
   messageP.innerText = message;
   alert.classList.add("show-alert");
 }
@@ -107,7 +123,6 @@ function onCloseClicked() {
       a => {
         a.classList.remove("show-alert");
         a.classList.remove("close-alert");
-        console.log(a);
       },
       450,
       alert

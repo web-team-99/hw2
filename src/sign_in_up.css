@@ -65,6 +65,7 @@ body {
   max-width: 300px;
   height: 50px;
   max-height: 80px;
+  text-align: right;
   animation-duration: 2s;
 }
 
