@@ -25,8 +25,11 @@
     <!-- Top Navigation bar -->
     <nav class="navbar fixed-top shadow" id="topNavbar">
       <div class="d-flex" id="navContainer">
-        <a class="navbar-brand" id="logo">WebDev</a>
-
+        <div class="navbar-brand" id="logo">
+          <img src="/src/files/black_logo_200x200.png" class="logoImg " />
+          <img src="files/red_logo_200x200.png" class="logoImg disabledLogo" />
+          <!-- <a class="navbar-brand" id="logo">WebDev</a> -->
+        </div>
         <button
           class="btn btn-info active"
           id="sidebarCollapse"
@@ -77,12 +80,6 @@
       </div>
     </nav>
 
-    <!-- Tab contents -->
-    <!-- <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade active show" id="home-tab-content" role="tabpanel" aria-labelledby="home-tab"></div>
-        <div class="tab-pane fade" id="data-tab-content" role="tabpanel" aria-labelledby="data-tab"></div>
-    </div> -->
-
     <!-- Sidebar and Content -->
     <div class="wrapper">
       <!-- Side Navigation bar-->
@@ -100,13 +97,6 @@
             <p class="sidebar-headers">تنظیمات</p>
             <ul id="setting">
               <li class="d-flex justify-content-between align-items-center">
-                <!-- <p id="nightMode-text ">حالت شب</p> -->
-                <!-- <input class="" type="checkbox" data-toggle="toggle" data-on="فعال" data-off="غیرفعال"
-                                data-width="75px" data-style="ios" id="nightModeCheck" onclick="toggleNightMode()"/> -->
-                <!-- <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="nightModeSwitch">
-                                <label class="custom-control-label" for="customSwitch1">حالت شب</label>
-                            </div> -->
                 <div class="custom-control custom-switch" id="customSwitch">
                   <input
                     type="checkbox"

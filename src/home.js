@@ -41,8 +41,10 @@ function toggleNightMode(checkbox) {
   const text_low = "--text-low";
   const text_med = "--text-med";
   const text_high = "--text-high";
+  const image_shadow = "--image-shadow";
 
   const docElementStyle = document.documentElement.style;
+  let logos = document.getElementsByClassName("logoImg");
 
   if (checkbox.checked) {
     console.log("NightMode on");
@@ -53,6 +55,10 @@ function toggleNightMode(checkbox) {
     docElementStyle.setProperty(text_low, "var(--dark-text-low)");
     docElementStyle.setProperty(text_med, "var(--dark-text-med)");
     docElementStyle.setProperty(text_high, "var(--dark-text-high)");
+    docElementStyle.setProperty(image_shadow, "var(--white-image-shadow)");
+
+    logos[0].classList.add("disabledLogo");
+    logos[1].classList.remove("disabledLogo");
     return;
   }
   console.log("NightMode off");
@@ -63,6 +69,10 @@ function toggleNightMode(checkbox) {
   docElementStyle.setProperty(text_low, "var(--light-text-low)");
   docElementStyle.setProperty(text_med, "var(--light-text-med)");
   docElementStyle.setProperty(text_high, "var(--light-text-high)");
+  docElementStyle.setProperty(image_shadow, "var(--black-image-shadow)");
+
+  logos[1].classList.add("disabledLogo");
+  logos[0].classList.remove("disabledLogo");
 }
 
 let tabs = document.getElementById("nav-tabs");
