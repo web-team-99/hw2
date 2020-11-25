@@ -20,12 +20,12 @@
   --image-shadow: var(--black-image-shadow);
 
   /* light theme (This values will be assign to 'used theme' at first and when nightMode is disable.)*/
-  --light-background-low: #f5f5f5;
-  --light-backgrounf-med: #dce1e9;
-  --light-background-high: #f1f6f9;
+  --light-background-low: rgb(253, 253, 253);
+  --light-backgrounf-med: rgb(109, 165, 250);
+  --light-background-high: rgb(217, 223, 255);
   --light-text-low: ;
-  --light-text-med: rgb(8, 79, 129);
-  --light-text-high: #222831;
+  --light-text-med: rgb(2, 68, 190);
+  --light-text-high: rgb(0, 24, 158);
   --black-image-shadow: black;
 
   /* dark theme (This values will be assign to 'used theme' vars when nightMode is active.)*/
@@ -33,9 +33,13 @@
   --dark-background-med: #283149;
   --dark-background-high: #404b69;
   --dark-text-low: ;
-  --dark-text-med: #e94560;
-  --dark-text-high: #dbedf3;
+  --dark-text-med: #ffc1c1;
+  --dark-text-high: #f78282;
   --white-image-shadow: white;
+}
+
+* {
+  transition: all 0.7s ease;
 }
 
 body {

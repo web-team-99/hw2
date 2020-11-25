@@ -2,7 +2,7 @@
 @import url("https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css");
 
 body {
-  background-color: rgb(164, 170, 199);
+  background-color: rgb(217, 223, 255);
   font-family: "sahel", "shabnam", sans-serif;
 }
 
@@ -14,7 +14,7 @@ body {
   position: absolute;
   right: 5%;
   bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(41, 30, 194, 0.336);
   color: white;
   max-width: 30%;
   text-align: right;
@@ -24,12 +24,17 @@ body {
 }
 
 .tab {
-  background-color: rgba(73, 117, 184, 0.753);
-  color: rgb(0, 64, 182);
+  background-color: rgb(109, 165, 250);
+  color: rgb(2, 68, 190);
   opacity: 0.7;
   padding: 1em;
   cursor: pointer;
   font-weight: bold;
+}
+
+#signin,
+#signup {
+  color: rgb(45, 41, 252);
 }
 
 .active {
