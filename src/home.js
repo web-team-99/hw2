@@ -15,6 +15,7 @@ function onSidebarCollapseClicked() {
     console.log("class added...");
 }
 
+
 function swipeFromRight(classList, is_reversed) {
     const swipe = "swipeAnimation";
     const swipe_reversed = "swipeAnimationReversed";
@@ -31,6 +32,7 @@ function swipeFromRight(classList, is_reversed) {
     }, 400);
 }
 
+
 function toggleNightMode(checkbox) {
     console.log('night Mode toggled.');
     // used theme
@@ -42,6 +44,7 @@ function toggleNightMode(checkbox) {
     const text_high = "--text-high";
 
     const docElementStyle = document.documentElement.style;
+    let logos = document.getElementsByClassName("logoImg");
     
     if (checkbox.checked) {
         console.log("NightMode on");
@@ -52,6 +55,9 @@ function toggleNightMode(checkbox) {
         docElementStyle.setProperty(text_low, "var(--dark-text-low)");
         docElementStyle.setProperty(text_med, "var(--dark-text-med)");
         docElementStyle.setProperty(text_high, "var(--dark-text-high)");
+        
+        logos[0].classList.add("disabledLogo");
+        logos[1].classList.remove("disabledLogo");
         return;
     }
     console.log("NightMode off");
@@ -62,7 +68,11 @@ function toggleNightMode(checkbox) {
     docElementStyle.setProperty(text_low, "var(--light-text-low)");
     docElementStyle.setProperty(text_med, "var(--light-text-med)");
     docElementStyle.setProperty(text_high, "var(--light-text-high)");
+
+    logos[1].classList.add("disabledLogo");
+    logos[0].classList.remove("disabledLogo");
 }
+
 
 let tabs = document.getElementById("nav-tabs");
 tabs.addEventListener("click", onTabClicked);

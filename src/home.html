@@ -9,7 +9,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="stylesheet" href="home.css" />
     <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" /> -->
-    
+
     <title>Document</title>
 </head>
 
@@ -17,8 +17,11 @@
     <!-- Top Navigation bar -->
     <nav class="navbar fixed-top shadow" id="topNavbar">
         <div class="d-flex" id="navContainer">
-            <a class="navbar-brand" id="logo">WebDev</a>
-
+            <div class="navbar-brand" id="logo">
+                <img src="/src/files/black_logo_200x200.png" class="logoImg " />
+                <img src="files/red_logo_200x200.png" class="logoImg disabledLogo"/>
+                <!-- <a class="navbar-brand" id="logo">WebDev</a> -->
+            </div>
             <button class="btn btn-info active" id="sidebarCollapse" type="button" onclick="onSidebarCollapseClicked()">
                 <span></span>
                 <span></span>
@@ -28,15 +31,13 @@
             <div class="d-flex justify-content-between" id="nav-items">
                 <ul class="nav nav-tabs " id="nav-tabs" role="tablist">
                     <li class="nav-item">
-                    <a class="nav-link active tab" id="home-tab" data-toggle="tab" role="tab" href="#home-tab-content"
-                        aria-controls="home-tab-content" >خانه</a>
+                        <a class="nav-link active tab" id="home-tab" data-toggle="tab" role="tab"
+                            href="#home-tab-content" aria-controls="home-tab-content">خانه</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link tab" id="data-tab" data-toggle="tab" role="tab"
-                        href="#data-tab-content" aria-controls="data-tab-content">داده ها</a>
+                        <a class="nav-link tab" id="data-tab" data-toggle="tab" role="tab" href="#data-tab-content"
+                            aria-controls="data-tab-content">داده ها</a>
                     </li>
-                    <!-- <div class="tab active">home</div>
-                    <div class="tab">data</div> -->
                 </ul>
                 <ul class="nav" id="login-btns">
                     <button class="btn btn-secondary mx-1">ورود</button>
@@ -69,13 +70,6 @@
                     <p class="sidebar-headers">تنظیمات</p>
                     <ul id="setting">
                         <li class="d-flex justify-content-between align-items-center">
-                            <!-- <p id="nightMode-text ">حالت شب</p> -->
-                            <!-- <input class="" type="checkbox" data-toggle="toggle" data-on="فعال" data-off="غیرفعال"
-                                data-width="75px" data-style="ios" id="nightModeCheck" onclick="toggleNightMode()"/> -->
-                            <!-- <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="nightModeSwitch">
-                                <label class="custom-control-label" for="customSwitch1">حالت شب</label>
-                            </div> -->
                             <div class="custom-control custom-switch" id="customSwitch">
                                 <input type="checkbox" class="custom-control-input" id="nightModeSwitch"
                                     onclick="toggleNightMode(this)">
@@ -93,7 +87,8 @@
             <div id="containerInner">
                 <div class="tab-content" id="nav-tabContent">
                     <!-- Home Tab Content-->
-                    <div class="tab-pane fade show in active tabContent" id="home-tab-content" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade show in active tabContent" id="home-tab-content" role="tabpanel"
+                        aria-labelledby="home-tab">
                         <b> WE ARE LEGENDARY</b>
                     </div>
                     <!--  Data Tab Content-->

@@ -55,10 +55,21 @@ body {
 #logo {
   max-width: 284px;
   min-width: 284px;
+  max-height: 50px;
   margin-inline-start: 0px;
   align-self: center;
   color: var(--text-high);
+  overflow: hidden;
   /* padding-bottom: 10px; */
+}
+
+.logoImg {
+  display: block;
+  transform: translateX(40px) translateY(-80px) scale(0.65);
+}
+
+.disabledLogo {
+  display: none;
 }
 
 #nav-tabs {
@@ -174,21 +185,11 @@ body {
   box-shadow: 1px 1px 3px rgb(5, 8, 58);
 }
 
-/* #sidebar.active {
-    margin-right: -300px;
-} */
-
 #sidebar ul.components {
-  /* background-color: blanchedalmond; */
   padding-inline-start: 0px;
 }
 
-/* #sidebar #team{
-    background-color: brown;
-} */
-
 #setting p {
-  /* background-color: chartreuse; */
   margin-bottom: 0px;
 }
 
@@ -207,8 +208,6 @@ body {
 #sidebar ul li {
   width: 100%;
   box-sizing: unset;
-  /* text-align: right; */
-  /* padding-left: 20px; */
 }
 
 /* sidebar collapse button */
@@ -250,13 +249,10 @@ body {
 #page-contents {
   /* background-color: var(--white-smoke); */
   margin-right: 300px;
-  /* min-width: 100%; */
   width: calc( 100% - 300px);
   height: 100%;
-  /* padding-top: 20px; */
   padding: 100px;
   position: fixed;
-  /* overflow-y: auto; */
 }
 
 #containerInner {
@@ -328,7 +324,6 @@ body {
 @media (max-width: 375px) {
   #logo {
     width: 100%;
-    /* min-width: fit-content; */
   }
 }
 
@@ -353,20 +348,7 @@ body {
 }
 
 
-/* Tabs */
-/* .tab {
-  background-color: var(--background-high);
-  color: var(--text-high);
-  opacity: .7;
-  padding: 5;
-  
-} */
-
-/* .active {
-  background-color: var(--background-low);
-  opacity: 1;
-} */
-
+/* Tabs Content show*/
 .show {
   animation: fade .5s ease-in-out;
 }
@@ -377,6 +359,7 @@ body {
 }
 
 
+/* Night Mode Switch */
 #customSwitch {
   width: 100%;
 }
@@ -459,6 +442,7 @@ body {
   border-bottom: solid 4px var(--text-high) !important;
 }
 
+
 /* Buttons */
 .btn-secondary {
   background-color: var(--background-med) !important;
@@ -474,20 +458,16 @@ transform: none;
 
 .btn-outline-primary:focus, .btn:focus{
   box-shadow: unset;
-  /* transform: scale(.9); */
-  /* animation: btn_clicked .4s ease-in-out; */
 }
 
-/* .btn-outline-primary:active {
-  transform: translateY(1px);
-} */
+.btn-outline-primary:focus {
+  color: var(--text-high);
+  background-color: transparent;
+  border-color: var(--text-high);
+}
 
 .btn:active {
   transform: translateY(1px);
 }
 
-/* @keyframes btn_clicked {
-  0% {transform: scale(0.95);}
-  100% {transform: none;}
-} */
 
