@@ -58,7 +58,6 @@ body {
   align-self: center;
   color: var(--text-high);
   overflow: hidden;
-  /* padding-bottom: 10px; */
 }
 
 .logoImg {
@@ -515,3 +514,7 @@ body {
   transform: translateY(1px);
 }
 
+/* Footer buttons */
+.footer-btn:active, .footer-btn:focus, .footer-btn:visited {
+  transform: translateY(4px);
+}
