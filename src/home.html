@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="home.css" />
     <!-- <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" /> -->
 
-    <title>Document</title>
-</head>
+    <title>HW2</title>
+    <link
+      rel="icon"
+      href="files/blue_favicon/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<body dir="rtl">
+  <body dir="rtl">
     <!-- Top Navigation bar -->
     <nav class="navbar fixed-top shadow" id="topNavbar">
         <div class="d-flex" id="navContainer">
@@ -45,224 +53,350 @@
                 </ul>
             </div>
         </div>
+      </div>
     </nav>
 
-    <!-- Tab contents -->
-    <!-- <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade active show" id="home-tab-content" role="tabpanel" aria-labelledby="home-tab"></div>
-        <div class="tab-pane fade" id="data-tab-content" role="tabpanel" aria-labelledby="data-tab"></div>
-    </div> -->
-
+    
     <!-- Sidebar and Content -->
     <div class="wrapper">
-        <!-- Side Navigation bar-->
-        <nav id="sidebar">
-            <ul class="list-unstyled components">
-                <li>
-                    <p class="sidebar-headers">اعضای تیم</p>
-                    <ul id="team">
-                        <li>محسن کثیری</li>
-                        <li>مهدی فرزادی</li>
-                        <li>محمدجواد میرتیموری</li>
-                    </ul>
-                </li>
-                <li>
-                    <p class="sidebar-headers">تنظیمات</p>
-                    <ul id="setting">
-                        <li class="d-flex justify-content-between align-items-center">
-                            <div class="custom-control custom-switch" id="customSwitch">
-                                <input type="checkbox" class="custom-control-input" id="nightModeSwitch"
-                                    onclick="toggleNightMode(this)">
-                                <label class="custom-control-label" for="nightModeSwitch">حالت شب</label>
-                            </div>
-
-                        </li>
-                    </ul>
-                </li>
+      <!-- Side Navigation bar-->
+      <nav id="sidebar">
+        <ul class="list-unstyled components">
+          <li>
+            <p class="sidebar-headers">اعضای تیم</p>
+            <ul id="team">
+              <li>محسن کثیری</li>
+              <li>مهدی فرزادی</li>
+              <li>محمدجواد میرتیموری</li>
             </ul>
-        </nav>
-
-        <!-- Contents -->
-        <div class="" id="page-contents">
-            <div id="containerInner">
-                <div class="tab-content" id="nav-tabContent">
-                    <!-- Home Tab Content-->
-                    <div class="tab-pane fade show in active tabContent" id="home-tab-content" role="tabpanel"
-                        aria-labelledby="home-tab">
-                        <b> WE ARE LEGENDARY</b>
-                    </div>
-                    <!--  Data Tab Content-->
-                    <div class="tab-pane fade tabContent" id="data-tab-content" role="tabpanel"
-                        aria-labelledby="data-tab">
-                        <table class="table table-striped table-bordered" id="content-table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">رتبه</th>
-                                    <th scope="col">نام تیم</th>
-                                    <th scope="col">نام دانشگاه و کشور</th>
-                                    <th scope="col">امتیاز</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">۱</th>
-                                    <td>روشنز</td>
-                                    <td>صنعتی شریف / ایران</td>
-                                    <td>۱۲۰۰</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">۲</th>
-                                    <td>خاموشز</td>
-                                    <td>سنتی کثیف / شیران</td>
-                                    <td>۵۰۰</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">۳</th>
-                                    <td>کم نورز</td>
-                                    <td>صنعتی ردیف / دلیران</td>
-                                    <td>۳۵۰</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">۴</th>
-                                    <td>سوخته‌ز</td>
-                                    <td>سنتی خفیف / کبیران</td>
-                                    <td>۹۰</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">۵</th>
-                                    <td>کم سوز</td>
-                                    <td>صنعتی حنیف / پیران</td>
-                                    <td>۴٫۵</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="small-view-data">
-                            <div class="small-view-data-content">
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رتبه</h5>
-                                    <h5 class="small-view-data-element-explain">۱</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">نام تیم</h5>
-                                    <h5 class="small-view-data-element-explain">روشنز</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
-                                    <h5 class="small-view-data-element-explain">صنعتی شریف/ایران</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">امتیاز</h5>
-                                    <h5 class="small-view-data-element-explain">۱۲۰۰</h5>
-                                </div>
-                            </div>
-
-                            <div class="small-view-data-content">
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رتبه</h5>
-                                    <h5 class="small-view-data-element-explain">۲</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">نام تیم</h5>
-                                    <h5 class="small-view-data-element-explain">خاموشز</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
-                                    <h5 class="small-view-data-element-explain">سنتی کثیف/شیران</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">امتیاز</h5>
-                                    <h5 class="small-view-data-element-explain">۵۰۰</h5>
-                                </div>
-                            </div>
-
-                            <div class="small-view-data-content">
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رتبه</h5>
-                                    <h5 class="small-view-data-element-explain">۳</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">نام تیم</h5>
-                                    <h5 class="small-view-data-element-explain">کم نورز</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
-                                    <h5 class="small-view-data-element-explain">صنعتی ردیف/دلیران</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">امتیاز</h5>
-                                    <h5 class="small-view-data-element-explain">۳۵۰</h5>
-                                </div>
-                            </div>
-
-                            <div class="small-view-data-content">
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رتبه</h5>
-                                    <h5 class="small-view-data-element-explain">۴</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">نام تیم</h5>
-                                    <h5 class="small-view-data-element-explain">سوخته‌ز</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
-                                    <h5 class="small-view-data-element-explain">سنتی خفیف/کبیران</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">امتیاز</h5>
-                                    <h5 class="small-view-data-element-explain">۹۰</h5>
-                                </div>
-                            </div>
-
-                            <div class="small-view-data-content">
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رتبه</h5>
-                                    <h5 class="small-view-data-element-explain">۵</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">نام تیم</h5>
-                                    <h5 class="small-view-data-element-explain">کم سوز</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">رشته و دانشگاه</h5>
-                                    <h5 class="small-view-data-element-explain">صنعتی حنیف/پیران</h5>
-                                </div>
-                                <div class="small-view-data-element">
-                                    <h5 class="small-view-data-element-subject">امتیاز</h5>
-                                    <h5 class="small-view-data-element-explain">۴٫۵</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; justify-content: space-between; margin: 20px">
-                            <button class="btn btn-outline-primary mx-1 table-button">
-                                قبلی
-                            </button>
-                            <button class="btn btn-outline-primary mx-1 table-button">
-                                بعدی
-                            </button>
-                        </div>
-                    </div>
+          </li>
+          <li>
+            <p class="sidebar-headers">تنظیمات</p>
+            <ul id="setting">
+              <li class="d-flex justify-content-between align-items-center">
+                <div class="custom-control custom-switch" id="customSwitch">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="nightModeSwitch"
+                    onclick="toggleNightMode(this)"
+                  />
+                  <label class="custom-control-label" for="nightModeSwitch"
+                    >حالت شب</label
+                  >
                 </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contents -->
+      <div class="" id="page-contents">
+        <div id="containerInner">
+          <div class="tab-content" id="nav-tabContent">
+            <!-- Home Tab Content-->
+            <div
+              class="tab-pane fade show in active tabContent"
+              id="home-tab-content"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <div class="four-in-line-pictures">
+                <figure class="gallery__item gallery__item--1">
+                  <img
+                    src="files/mainPictures/1.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                  <img
+                    src="files/mainPictures/2.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                  <img
+                    src="files/mainPictures/3.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                  <img
+                    src="files/mainPictures/4.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                  <img
+                    src="files/mainPictures/5.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                  <img
+                    src="files/mainPictures/6.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+
+                <figure class="gallery__item gallery__item--7">
+                  <img
+                    src="files/mainPictures/7.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--8">
+                  <img
+                    src="files/mainPictures/8.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--9">
+                  <img
+                    src="files/mainPictures/9.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--10">
+                  <img
+                    src="files/mainPictures/10.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--11">
+                  <img
+                    src="files/mainPictures/11.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+                <figure class="gallery__item gallery__item--12">
+                  <img
+                    src="files/mainPictures/12.jpg"
+                    class="gallery__img img-shadow"
+                    alt="Image 1"
+                  />
+                </figure>
+              </div>
             </div>
+            <!--  Data Tab Content-->
+            <div
+              class="tab-pane fade tabContent"
+              id="data-tab-content"
+              role="tabpanel"
+              aria-labelledby="data-tab"
+            >
+              <table
+                class="table table-striped table-bordered"
+                id="content-table"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">رتبه</th>
+                    <th scope="col">نام تیم</th>
+                    <th scope="col">نام دانشگاه و کشور</th>
+                    <th scope="col">امتیاز</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">۱</th>
+                    <td>روشنز</td>
+                    <td>صنعتی شریف / ایران</td>
+                    <td>۱۲۰۰</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">۲</th>
+                    <td>خاموشز</td>
+                    <td>سنتی کثیف / شیران</td>
+                    <td>۵۰۰</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">۳</th>
+                    <td>کم نورز</td>
+                    <td>صنعتی ردیف / دلیران</td>
+                    <td>۳۵۰</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">۴</th>
+                    <td>سوخته‌ز</td>
+                    <td>سنتی خفیف / کبیران</td>
+                    <td>۹۰</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">۵</th>
+                    <td>کم سوز</td>
+                    <td>صنعتی حنیف / پیران</td>
+                    <td>۴٫۵</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="small-view-data">
+                <div class="small-view-data-content">
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">رتبه</h5>
+                    <h5 class="small-view-data-element-explain">۱</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">نام تیم</h5>
+                    <h5 class="small-view-data-element-explain">روشنز</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">
+                      رشته و دانشگاه
+                    </h5>
+                    <h5 class="small-view-data-element-explain">
+                      صنعتی شریف/ایران
+                    </h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">امتیاز</h5>
+                    <h5 class="small-view-data-element-explain">۱۲۰۰</h5>
+                  </div>
+                </div>
+
+                <div class="small-view-data-content">
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">رتبه</h5>
+                    <h5 class="small-view-data-element-explain">۲</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">نام تیم</h5>
+                    <h5 class="small-view-data-element-explain">خاموشز</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">
+                      رشته و دانشگاه
+                    </h5>
+                    <h5 class="small-view-data-element-explain">
+                      سنتی کثیف/شیران
+                    </h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">امتیاز</h5>
+                    <h5 class="small-view-data-element-explain">۵۰۰</h5>
+                  </div>
+                </div>
+
+                <div class="small-view-data-content">
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">رتبه</h5>
+                    <h5 class="small-view-data-element-explain">۳</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">نام تیم</h5>
+                    <h5 class="small-view-data-element-explain">کم نورز</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">
+                      رشته و دانشگاه
+                    </h5>
+                    <h5 class="small-view-data-element-explain">
+                      صنعتی ردیف/دلیران
+                    </h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">امتیاز</h5>
+                    <h5 class="small-view-data-element-explain">۳۵۰</h5>
+                  </div>
+                </div>
+
+                <div class="small-view-data-content">
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">رتبه</h5>
+                    <h5 class="small-view-data-element-explain">۴</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">نام تیم</h5>
+                    <h5 class="small-view-data-element-explain">سوخته‌ز</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">
+                      رشته و دانشگاه
+                    </h5>
+                    <h5 class="small-view-data-element-explain">
+                      سنتی خفیف/کبیران
+                    </h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">امتیاز</h5>
+                    <h5 class="small-view-data-element-explain">۹۰</h5>
+                  </div>
+                </div>
+
+                <div class="small-view-data-content">
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">رتبه</h5>
+                    <h5 class="small-view-data-element-explain">۵</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">نام تیم</h5>
+                    <h5 class="small-view-data-element-explain">کم سوز</h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">
+                      رشته و دانشگاه
+                    </h5>
+                    <h5 class="small-view-data-element-explain">
+                      صنعتی حنیف/پیران
+                    </h5>
+                  </div>
+                  <div class="small-view-data-element">
+                    <h5 class="small-view-data-element-subject">امتیاز</h5>
+                    <h5 class="small-view-data-element-explain">۴٫۵</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin: 20px;
+                "
+              >
+                <button class="btn btn-outline-primary mx-1 table-button">
+                  قبلی
+                </button>
+                <button class="btn btn-outline-primary mx-1 table-button">
+                  بعدی
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Footer (for small screen sizes) -->
-    <footer class="dk-footer fixed-bottom d-flex align-items-stretch" id="pageFooter">
-        <button class="btn">خانه</button>
+    <footer
+      class="dk-footer fixed-bottom d-flex align-items-stretch"
+      id="pageFooter"
+    >
+      <button class="btn">خانه</button>
 
-        <button class="btn">داده ها</button>
+      <button class="btn">داده ها</button>
 
-        <button class="btn">ورود</button>
+      <button class="btn">ورود</button>
 
-        <button class="btn">ثبت نام</button>
+      <button class="btn">ثبت نام</button>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="home.js"></script>
-</body>
-
+  </body>
 </html>
