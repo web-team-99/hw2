@@ -45,6 +45,10 @@ body {
   font-family: "sahel", "shabnam", sans-serif;
 }
 
+* {
+  transition: all .3s ease-in-out;
+}
+
 /* Navigation bar */
 .navbar {
   min-height: 70px;
