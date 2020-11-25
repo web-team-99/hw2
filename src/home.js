@@ -1,3 +1,7 @@
+function onLoad(){
+    
+}
+
 function onSidebarCollapseClicked() {
   console.log("sidebar-collapse clicked !!!");
   var classlist = document.getElementById("sidebar").classList;
@@ -108,3 +112,4 @@ function onSignIn() {
 function onSignUp() {
   location.replace("./sign_in_up.html?tab=signup");
 }
+
