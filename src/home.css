@@ -23,7 +23,7 @@
   --light-backgrounf-med: #dce1e9;
   --light-background-high: #f1f6f9;
   --light-text-low: ;
-  --light-text-med: ;
+  --light-text-med: rgb(8, 79, 129);
   --light-text-high: #222831;
 
 
@@ -97,12 +97,16 @@ body {
 
 .table-striped > tbody > tr:nth-child(2n + 1) > td,
 .table-striped > tbody > tr:nth-child(2n + 1) > th {
-  background-color: var(--white-smoke);
+  /* background-color: var(--white-smoke); */
+  background-color: var(--background-low);
+  color: var(--text-med);
 }
 
 .table-striped > tbody > tr:nth-child(2n) > td,
 .table-striped > tbody > tr:nth-child(2n) > th {
-  background-color: var(--medium-color);
+  /* background-color: var(--medium-color); */
+  background-color: var(--background-med);
+  color: var(--text-med);
 }
 
 .table-striped > tbody > tr > td,
@@ -111,9 +115,11 @@ body {
 }
 
 .table-striped > thead > tr > th {
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color); */
+  background-color: var(--background-high);
   text-align: center;
-  color: var(--white-smoke);
+  /* color: var(--white-smoke); */
+  color: var(--text-high);
 }
 
 .table-button {
@@ -123,7 +129,8 @@ body {
 .small-view-data-content {
   margin: 20px;
   padding: 20px;
-  background-color: var(--light-color);
+  /* background-color: var(--light-color); */
+  background-color: var(--background-med);
 }
 
 .small-view-data-element {
@@ -132,11 +139,13 @@ body {
 }
 
 .small-view-data-element-subject {
-  color: var(--dark-color);
+  /* color: var(--dark-color); */
+  color: var(--text-high);
 }
 
 .small-view-data-element-explain {
-  color: var(--medium-color);
+  /* color: var(--medium-color); */
+  color: var(--text-med);
 }
 
 
@@ -454,7 +463,7 @@ body {
 .btn-secondary {
   background-color: var(--background-med) !important;
   color: var(--text-med) !important;
-  border-color: var(--background-low);
+  /* border-color: var(--background-low); */
 }
 
 .btn-outline-primary {
@@ -463,15 +472,20 @@ border-color: var(--text-high);
 transform: none;
 }
 
-.btn-outline-primary:focus{
+.btn-outline-primary:focus, .btn:focus{
   box-shadow: unset;
   /* transform: scale(.9); */
   /* animation: btn_clicked .4s ease-in-out; */
 }
 
-.btn-outline-primary:active {
+/* .btn-outline-primary:active {
+  transform: translateY(1px);
+} */
+
+.btn:active {
   transform: translateY(1px);
 }
+
 /* @keyframes btn_clicked {
   0% {transform: scale(0.95);}
   100% {transform: none;}
