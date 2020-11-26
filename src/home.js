@@ -1,9 +1,17 @@
 function onLoad(){
-    
+    let url = new URL(window.location.href);
+    let tab = url.searchParams.get("tab");
+    if (tab === "home"){
+      document.getElementById("home-tab").click();
+      return;
+    }
+    if( tab === "data"){
+      document.getElementById("data-tab").click();
+      return;
+    }
 }
 
 function onSidebarCollapseClicked() {
-  console.log("sidebar-collapse clicked !!!");
   var classlist = document.getElementById("sidebar").classList;
   var collapseBtnClasslist = document.getElementById("sidebarCollapse")
     .classList;
@@ -11,13 +19,11 @@ function onSidebarCollapseClicked() {
     swipeFromRight(classlist, true);
     classlist.remove("active");
     collapseBtnClasslist.add("active");
-    console.log("class removed...");
     return;
   }
   swipeFromRight(classlist, false);
   classlist.add("active");
   collapseBtnClasslist.remove("active");
-  console.log("class added...");
 }
 
 function swipeFromRight(classList, is_reversed) {
@@ -37,7 +43,6 @@ function swipeFromRight(classList, is_reversed) {
 }
 
 function toggleNightMode(checkbox) {
-  console.log("night Mode toggled.");
   // used theme
   const background_low = "--background-low";
   const background_med = "--background-med";
@@ -51,8 +56,6 @@ function toggleNightMode(checkbox) {
   let logos = document.getElementsByClassName("logoImg");
 
   if (checkbox.checked) {
-    console.log("NightMode on");
-
     docElementStyle.setProperty(background_low, "var(--dark-background-low)");
     docElementStyle.setProperty(background_med, "var(--dark-background-med)");
     docElementStyle.setProperty(background_high, "var(--dark-background-high)");
@@ -65,8 +68,6 @@ function toggleNightMode(checkbox) {
     logos[1].classList.remove("disabledLogo");
     return;
   }
-  console.log("NightMode off");
-
   docElementStyle.setProperty(background_low, "var(--light-background-low)");
   docElementStyle.setProperty(background_med, "var(--light-backgrounf-med)");
   docElementStyle.setProperty(background_high, "var(--light-background-high)");
@@ -81,28 +82,36 @@ function toggleNightMode(checkbox) {
 
 let tabs = document.getElementById("nav-tabs");
 tabs.addEventListener("click", onTabClicked);
+let pageFooter = document.getElementById("pageFooter");
+pageFooter.addEventListener("click", onTabClicked);
 
 function onTabClicked(event) {
   let tabs = document.getElementsByClassName("tab");
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove("active");
-    console.log("removing active tab");
   }
 
   let tabContent = document.getElementsByClassName("tabContent");
   for (let i = 0; i < tabContent.length; i++) {
     tabContent[i].classList.remove("show");
-    console.log("removing show content");
+  }
+  let tabID = event.target.id;
+  let footerID;
+  if (tabID == "f-home-tab" || tabID == "home-tab"){
+    tabID = "home-tab";
+    footerID = "f-home-tab";
+  }
+  else if (tabID == "f-data-tab" || tabID == "data-tab") {
+    tabID = "data-tab";
+    footerID = "f-data-tab";
   }
 
-  let contentID = event.target.id + "-content";
-  console.log(contentID);
+  let contentID = tabID + "-content";
+
   document.getElementById(contentID).classList.add("show");
   document.getElementById(contentID).classList.add("in");
-  document.getElementById(event.target.id).classList.add("active");
-  console.log(
-    document.getElementById(event.target.id).classList.contains("active")
-  );
+  document.getElementById(tabID).classList.add("active");
+  document.getElementById(footerID).classList.add("active");
 }
 
 function onSignIn() {

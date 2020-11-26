@@ -447,6 +447,13 @@ body {
   transform: none;
 }
 
+.btn-outline-primary:active, .btn-outline-primary:hover{
+  background-color: var(--background-high) !important;
+  border-color: var(--text-med) !important;
+  color: var(--text-med) !important;
+  box-shadow: none !important;
+}
+
 .btn-outline-primary:focus,
 .btn:focus {
   box-shadow: unset;
@@ -461,6 +468,7 @@ body {
 .btn:active {
   transform: translateY(1px);
 }
+
 
 /* Night Mode Switch */
 #customSwitch {
@@ -495,14 +503,19 @@ body {
   transform: none;
   background-color: #fff;
   border-radius: 1rem;
-  background-color: #adb5bd;
+  background-color: #3673b1;
 }
 
-/* .custom-switch .custom-control-input:checked~.custom-control-label::after {
-  background-color: #fff;
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+  background-color: rgb(187, 37, 37);
   -webkit-transform: translateX(0.625rem);
   transform: translateX(0.625rem);
   box-shadow: -0.125rem 0 0.125rem rgba(0, 0, 0, 0.2);
+} 
+
+.custom-control-input:checked~.custom-control-label::before {
+  background-color: var(--dark-text-med);
+  border-color: var(--dark-text-med);
 }
 
 .custom-switch.left {
@@ -520,8 +533,18 @@ padding-left: 0;
 
 .custom-switch.left .custom-control-label::after {
   left: calc(2.25rem + 2px);
-} */
+}
 
 .custom-control-input {
   margin-left: 33px;
+}
+
+
+/* Footer buttons */
+.footer-tab {
+  padding: 0;
+}
+
+.tab.active{
+  border-bottom: solid 4px !important;
 }

@@ -29,15 +29,15 @@ function onLoad() {
 }
 
 function onBack() {
-  location.replace("./home.html");
+  location.replace("./home.html?tab=home");
 }
 
 function signup(email, pass) {
-  location.replace("./home.html");
+  location.replace("./home.html?tab=home");
 }
 
 function signin(email, pass) {
-  location.replace("./home.html");
+  location.replace("./home.html?tab=home");
 }
 
 function signupValidate() {
