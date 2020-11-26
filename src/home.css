@@ -548,3 +548,44 @@ padding-left: 0;
 .tab.active{
   border-bottom: solid 4px !important;
 }
+
+
+/* Table btns */
+#table-back-btn span {
+  display: inline-block;
+  padding-left: 12px;
+}
+
+#table-back-btn span:before{
+  content: '\00ab';
+  opacity: 0;
+  transition: .5s;
+}
+
+#table-back-btn:hover span{
+  padding-right: 10px;
+}
+
+#table-back-btn:hover span:before {
+  opacity: 1;
+}
+
+
+#table-forth-btn span {
+  display: inline-block;
+  padding-right: 12px;
+}
+
+#table-forth-btn span:after {
+  content: '\00bb';
+  opacity: 0;
+  transition: .5s;
+}
+
+#table-forth-btn:hover span{
+  padding-left: 10px;
+}
+
+#table-forth-btn:hover span:after {
+  opacity: 1;
+}
